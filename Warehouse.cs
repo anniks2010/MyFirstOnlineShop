@@ -14,45 +14,45 @@ namespace MyFirtOnlineShop
         public Warehouse()
         {
             InStock = new List<Article>(); ///loon lao siin konstruktoris, et säästa resursse.
-            Article cinnamonBun = new Article("cinnamon bun", Category.PASTRY, 0.39);
+            Article cinnamonBun = new Article(1,"cinnamon bun", Category.PASTRY, 0.39);
             InStock.Add(cinnamonBun);
-            Article ciabatta = new Article("ciabatta", Category.PASTRY, 0.99);
+            Article ciabatta = new Article(2,"ciabatta", Category.PASTRY, 0.99);
             InStock.Add(ciabatta);
-            Article milk = new Article("milk", Category.DAIRY, 0.59);
+            Article milk = new Article(3,"milk", Category.DAIRY, 0.59);
             InStock.Add(milk);
-            Article yogurt = new Article("yogurt", Category.DAIRY, 0.89);
+            Article yogurt = new Article(4,"yogurt", Category.DAIRY, 0.89);
             InStock.Add(yogurt);
-            Article kalevChoclate = new Article("Kalev choclate", Category.CONFECTIONERY, 1.99);
+            Article kalevChoclate = new Article(5,"Kalev choclate", Category.CONFECTIONERY, 1.99);
             InStock.Add(kalevChoclate);
-            Article gummyBears = new Article("Gummy Bears", Category.CONFECTIONERY, 1.99);
+            Article gummyBears = new Article(6,"Gummy Bears", Category.CONFECTIONERY, 1.99);
             InStock.Add(gummyBears);
-            Article cocaCola = new Article("Coca Cola", Category.BEVERAGES, 0.99);
+            Article cocaCola = new Article(7,"Coca Cola", Category.BEVERAGES, 0.99);
             InStock.Add(cocaCola);
-            Article crafterBeer = new Article("Crafted Beer", Category.BEVERAGES, 6);
+            Article crafterBeer = new Article(8,"Crafted Beer", Category.BEVERAGES, 6);
             InStock.Add(crafterBeer);
-            Article orange = new Article("orange", Category.FRUIT, 0.4);
+            Article orange = new Article(9,"orange", Category.FRUIT, 0.4);
             InStock.Add(orange);
-            Article apple = new Article("apple", Category.FRUIT, 0.2);
+            Article apple = new Article(10,"apple", Category.FRUIT, 0.2);
             InStock.Add(apple);
-            Article potato = new Article("potato", Category.VEGGIE, 0.29);
+            Article potato = new Article(11,"potato", Category.VEGGIE, 0.29);
             InStock.Add(potato);
-            Article tomato = new Article("tomato", Category.VEGGIE, 1.29);
+            Article tomato = new Article(12,"tomato", Category.VEGGIE, 1.29);
             InStock.Add(tomato);
-            Article cannedBeans = new Article("Kidney beans in tomato sauce", Category.CANNED_FOOD, 0.69);
+            Article cannedBeans = new Article(13,"Kidney beans in tomato sauce", Category.CANNED_FOOD, 0.69);
             InStock.Add(cannedBeans);
-            Article turistiEine = new Article("Turisti eine", Category.CANNED_FOOD, 2);
+            Article turistiEine = new Article(14,"Turisti eine", Category.CANNED_FOOD, 2);
             InStock.Add(turistiEine);
-            Article salmon = new Article("salmon", Category.FISH, 4.99);
+            Article salmon = new Article(15,"salmon", Category.FISH, 4.99);
             InStock.Add(salmon);
-            Article fishFingers = new Article("Fish Fingers", Category.FISH, 1.69);
+            Article fishFingers = new Article(16,"Fish Fingers", Category.FISH, 1.69);
             InStock.Add(fishFingers);
-            Article pork = new Article("pork", Category.MEAT, 4.99);
+            Article pork = new Article(17,"pork", Category.MEAT, 4.99);
             InStock.Add(pork);
-            Article beef = new Article("beef", Category.MEAT, 10);
+            Article beef = new Article(18,"beef", Category.MEAT, 10);
             InStock.Add(beef);
-            Article shampoo = new Article("shampoo", Category.TOILETRIES, 4);
+            Article shampoo = new Article(19,"shampoo", Category.TOILETRIES, 4);
             InStock.Add(shampoo);
-            Article conditioner = new Article("conditioner", Category.TOILETRIES, 4);
+            Article conditioner = new Article(20,"conditioner", Category.TOILETRIES, 4);
             InStock.Add(conditioner);
 
            
@@ -62,27 +62,20 @@ namespace MyFirtOnlineShop
         {
             foreach(Article article in InStock)
             {
+                Console.WriteLine($"ID: {article.Id}");
                 Console.WriteLine($"Product: {article.Name}");
                 Console.WriteLine($"Category: {article.Category}");
                 Console.WriteLine($"Price: {article.Price}");
                 Console.WriteLine();
             }
         }
-        
-     //TODO add items to chart option
-        /*private bool IsInStock(string userInput)
+        //Get an article object from the list
+        public Article GetFromStock(int id)
         {
-            foreach(Article article in InStock)
-            {
-                if (article.Name.Contains(userInput))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }*/
+            return InStock[id - 1]; ///siin tagastan objekti kõik omadused ja -1, kuna programm hakkab lugema 0st.
         }
+        
+               
+    
     }
 }

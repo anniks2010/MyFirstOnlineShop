@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyFirtOnlineShop
 {
-    class Item
+    class Item ////Item on toode pluss kogus
     {
         Article article;
         int quantity;
@@ -16,12 +16,19 @@ namespace MyFirtOnlineShop
             article = _article;
             quantity = _quantity;
         }
-        public string Article
+        public Article Article
         {
-            get { return $"{article.Name} \n Category: {article.Category} \n Price: {article.Price} \n Quantity: {quantity}"; }
+            get { return article; }
         }
+        /*public string Article
+        {
+            get { return $"ID: {article.Id}\n Name: {article.Name} \n Category: {article.Category} \n Price: {article.Price} \n Quantity: {quantity} \n Total: {CalculateItemTotal()}"  ; }
+        }*/
         
-        
+        public void PrintItem()
+        {
+            Console.WriteLine($"ID: {article.Id}\n Name: {article.Name} \n Category: {article.Category} \n Price: {article.Price} \n Quantity: {quantity} \n Total: {CalculateItemTotal()}");
+        }
         
         public double CalculateItemTotal()
         {
