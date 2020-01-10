@@ -4,3 +4,9 @@ C:\Users\opilane\projects\MyFirtOnlineShop\bin\Debug\MyFirtOnlineShop.pdb
 C:\Users\opilane\projects\MyFirtOnlineShop\obj\Debug\MyFirtOnlineShop.csprojAssemblyReference.cache
 C:\Users\opilane\projects\MyFirtOnlineShop\obj\Debug\MyFirtOnlineShop.exe
 C:\Users\opilane\projects\MyFirtOnlineShop\obj\Debug\MyFirtOnlineShop.pdb
+C:\Users\opilane\Projects\MyFirstOnlineShop\bin\Debug\MyFirtOnlineShop.exe.config
+C:\Users\opilane\Projects\MyFirstOnlineShop\bin\Debug\MyFirtOnlineShop.exe
+C:\Users\opilane\Projects\MyFirstOnlineShop\bin\Debug\MyFirtOnlineShop.pdb
+C:\Users\opilane\Projects\MyFirstOnlineShop\obj\Debug\MyFirtOnlineShop.csprojAssemblyReference.cache
+C:\Users\opilane\Projects\MyFirstOnlineShop\obj\Debug\MyFirtOnlineShop.exe
+C:\Users\opilane\Projects\MyFirstOnlineShop\obj\Debug\MyFirtOnlineShop.pdb

@@ -34,7 +34,12 @@ namespace MyFirtOnlineShop
                     int userIdToRemove = int.Parse(Console.ReadLine());
                     shoppingCart.RemoveFromShoppingCard(userIdToRemove);
                 }
-                
+                else if (userInput == "confirm")
+                {
+                    shoppingCart.PrintTotal();
+                    Console.WriteLine($"Total amount of shoppingcart is {shoppingCart.Total} $");
+                    break;
+                }
 
                 
             }

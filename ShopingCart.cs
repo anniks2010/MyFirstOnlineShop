@@ -9,10 +9,16 @@ namespace MyFirtOnlineShop
     class ShopingCart
     {
         List<Item> shoppingCart;
+        double total;
 
         public ShopingCart()
         {
             shoppingCart = new List<Item>();
+            total = 0;
+        }
+        public double Total
+        {
+            get { return total; }
         }
 
 
@@ -47,6 +53,15 @@ namespace MyFirtOnlineShop
                 ////Console.WriteLine($"{item.CalculateItemTotal()}");
                 }
             }
-    }
+        }
+
+        ///calculate shopping chart total
+        public void PrintTotal()
+        {
+            foreach (Item item in shoppingCart)
+            {
+                total += item.CalculateItemTotal();
+            }
+        }
     }
 }
